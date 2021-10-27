@@ -35,8 +35,9 @@ def app():
     
     st.title('Linear Regression')
 
-    st.write("Linear Regression is one of the most used algorithms in Machine Learning and Artificial Intelligence, it's also straightforward and easy to understand")
-    slide_input = st.slider('Select a number of data points', 10, 50)
+    st.write("Linear Regression is the most fundamental algorithm in Machine Learning and Artificial Intelligence, it's applicable in several scenrios \
+        and is straighforward to emulate")
+    slide_input = st.slider('Select the number of data points', 10, 50)
 
     data = gen_points(slide_input)
     model, full_data = train_model(data)
