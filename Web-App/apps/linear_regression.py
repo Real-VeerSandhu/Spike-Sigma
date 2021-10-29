@@ -51,4 +51,4 @@ def app():
     st.write('## Use the trained model to make predictions')
     x_val = st.number_input('Enter an X value', 0, 99999999999999)
     if st.button('Run Model'):
-        st.write('AI Prediction (Y Value): ', int(model.predict([[x_val]])[0][0]))
+        st.write('Prediction (Y Value): ', int(model.predict([[x_val]])[0][0]))
