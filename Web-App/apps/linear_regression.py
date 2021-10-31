@@ -37,7 +37,7 @@ def app():
 
     st.write("Linear Regression is the most fundamental algorithm in Machine Learning and Artificial Intelligence, it's applicable in several scenrios \
         and is straighforward to emulate")
-    slide_input = st.slider('Select the number of data points', 10, 50)
+    slide_input = st.slider('Select the number of data points', 10, 20)
 
     data = gen_points(slide_input)
     model, full_data = train_model(data)
@@ -47,7 +47,6 @@ def app():
     fig.add_trace(go.Scatter(x=full_data['X'], y=full_data['Model'], mode='lines', name='Linear Regression Model'))
     st.plotly_chart(fig)
 
-    
     st.write('## Use the trained model to make predictions')
     x_val = st.number_input('Enter an X value', 0, 99999999999999)
     if st.button('Run Model'):
