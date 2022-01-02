@@ -11,6 +11,7 @@ def app():
     st.write("The following is the DataFrame of the `iris` dataset.")
 
     iris = datasets.load_iris()
+    type_df = type(iris)
     X = pd.DataFrame(iris.data, columns = iris.feature_names)
     Y = pd.Series(iris.target, name = 'class')
     df = pd.concat([X,Y], axis=1)
